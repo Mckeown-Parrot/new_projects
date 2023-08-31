@@ -7,12 +7,12 @@ load_dotenv()
 
 app = Flask(__name__)
 
-app.config['MAIL_SERVER']=os.getenv('MAIL_SERVER')
-app.config['MAIL_PORT'] = os.getenv('MAIL_PORT')
-app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
-app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
-app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS')
-app.config['MAIL_USE_SSL'] = os.getenv('MAIL_USE_SSL')
+app.config['MAIL_SERVER']=str(os.getenv('MAIL_SERVER'))
+app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT'))
+app.config['MAIL_USERNAME'] = str(os.getenv('MAIL_USERNAME'))
+app.config['MAIL_PASSWORD'] = str(os.getenv('MAIL_PASSWORD'))
+app.config['MAIL_USE_TLS'] = bool(os.getenv('MAIL_USE_TLS'))
+app.config['MAIL_USE_SSL'] = bool(os.getenv('MAIL_USE_SSL'))
 
 mail = Mail(app)
 @app.route("/mail")
@@ -33,5 +33,5 @@ def send_mail():
     return "mail"
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0',port=4545)
 
