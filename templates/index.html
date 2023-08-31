@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/img/background.avif" />
+  </head>
+  <body>
+    <h1 class="text-center">Mail Form</h1>
+    <form action="/submit" method="post" class="w-50 m-auto">
+      <label for="fullname" class="mb-3">name</label name='firstname'>
+      <input
+        type="text"
+        id="fullname"
+        placeholder="Fullname"
+        class="form-control"
+      />
+      <label for="email" class="mb-3">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="E-mail"
+        class="form-control"
+      />
+      <label for="message" class="mb-3">Message</label>
+      <textarea
+        id="message"
+        placeholder="Message"
+        class="form-control"
+      ></textarea>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+</html>

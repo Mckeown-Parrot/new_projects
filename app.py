@@ -17,7 +17,7 @@ app.config['MAIL_USE_SSL'] = bool(os.getenv('MAIL_USE_SSL'))
 mail = Mail(app)
 @app.route("/mail")
 def send_mail():
-    message = Message(sudject='BUTTON EVENT', 
+    message = Message(subject='BUTTON EVENT', 
                       recipients=['jameskwaku2020@outlook.com'], 
                       body='Programming with  rasberrypi', 
                       sender='jamesmckeown847@gmail.com'

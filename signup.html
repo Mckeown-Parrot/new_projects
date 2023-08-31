@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/img/background.avif" />
+  </head>
+  <body>
+    <h2 class="text-center">Sign Up</h2>
+    <form action="/signup" method="post" class="w-50 m-auto">
+      <label for="username" class="mb-3">Username</label>
+      <input
+        type="text"
+        id="username"
+        placeholder="Username"
+        class="form-control"
+      />
+      <label for="email" class="mb-3">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="E-mail"
+        class="form-control"
+      />
+      <label for="password" class="mb-3">Password</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        class="form-control"
+      />
+      <label for="confirm_password" class="mb-3">Confirm Password</label>
+      <input
+        type="password"
+        id="confirm_password"
+        placeholder="Confirm Password"
+        class="form-control"
+      />
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+  </body>
+</html>
